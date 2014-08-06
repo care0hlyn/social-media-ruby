@@ -1,6 +1,6 @@
 require 'rspec'
 require 'profile'
-require 'username'
+require 'github'
 
 describe Profile do
 	it 'initalizes the name of contact with an empty array for their Twitter username' do
@@ -20,4 +20,11 @@ describe Profile do
 		test_contact1.save
 		expect(Profile.all).to eq [test_contact, test_contact1]
 	end
-end
+
+	it "adds multiple twitter usernames" do
+		test_contact = Profile.new({:name => "Prez Obama"})
+		new_twitter = test_contact.add_twitter("@POTUS")
+		expect(test_contact.twitter). to eq new_twitter
+	end
+
+end 
