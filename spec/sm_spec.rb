@@ -28,3 +28,10 @@ describe Profile do
 	end
 
 end 
+
+describe Github do
+	it 'initializes the Github username' do
+		test_github = Github.new("care0hlyn")
+		test_github.should be_an_instance_of Github
+	end
+end
