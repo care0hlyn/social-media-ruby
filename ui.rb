@@ -15,7 +15,7 @@ def main_menu
 	when '2'
 		list_contact
 	when 'x'
-		puts "Goodbye, Alfred."
+		puts "Goodbye, Smalls."
 		exit
 	else
 		puts "Invalid."
@@ -26,14 +26,32 @@ def main_menu
 
 end
 
+def new_contact
 
-# 	puts "Enter Name:"
-# 	user_name = gets.chomp
+	puts "Enter Name:"
+	user_name = gets.chomp
 
-# 	puts "Enter Twitter Name:"
-# 	user_twitter = gets.chomp
+	puts "Enter Twitter Name:"
+	user_twitter = gets.chomp
 
-# 	puts "\n\nHello #{user_name}, your Twitter username is @#{user_twitter}."
+	puts "\nHello #{user_name}, your Twitter username is @#{user_twitter}."
+
+	puts "\n+ Another Twitter account? Y or N."
+
+	case user_decision = gets.chomp
+	when 'y'
+		new_twitter
+	when 'n'
+		puts "You're killing me, Smalls."
+		main_menu
+	else
+		puts "Invalid."
+	end
+
+	main_menu
+end
+
+
 	
 
 
