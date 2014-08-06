@@ -34,4 +34,10 @@ describe Github do
 		test_github = Github.new("care0hlyn")
 		test_github.should be_an_instance_of Github
 	end
+
+	it 'saves the username' do
+		test_github = Github.new("care0hlyn")
+		test_github.save
+		expect(Github.all).to eq [test_github]
+	end
 end

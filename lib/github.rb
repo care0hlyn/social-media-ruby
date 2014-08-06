@@ -7,4 +7,12 @@ class Github
 		@username = username
 	end
 
+	def Github.all
+		@@github
+	end
+
+	def save
+		@@github << self
+	end
+
 end
