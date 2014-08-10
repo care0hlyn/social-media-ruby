@@ -1,7 +1,6 @@
 class Twitter
 
 	attr_reader :twitter
-
 	@@twitter = []
 
 	def initialize(twitter)

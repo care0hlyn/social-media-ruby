@@ -1,10 +1,10 @@
 class Github
-	attr_reader :username
 
+	attr_reader :github
 	@@github = []
 
-	def initialize(username)
-		@username = username
+	def initialize(github)
+		@github = github
 	end
 
 	def Github.all

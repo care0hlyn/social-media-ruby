@@ -24,9 +24,8 @@ describe Profile do
 	it "adds multiple twitter usernames" do
 		test_contact = Profile.new({:name => "Prez Obama"})
 		new_twitter = test_contact.add_twitter("@POTUS")
-		expect(test_contact.twitter). to eq new_twitter
+		expect(test_contact.twitter).to eq new_twitter
 	end
-
 end 
 
 describe Github do
